@@ -8,7 +8,8 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.8"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+typing-extensions = "*"
 pyupgrade = "*"
 black = "*"
 autoflake = "*"
