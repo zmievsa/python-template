@@ -1,0 +1,20 @@
+# CONFIGURATION -------------------------
+_subdirectory: project
+_templates_suffix: .jinja
+_jinja_extensions:
+    - copier_templates_extensions.TemplateExtensionLoader
+    - extensions/context.py:ContextUpdater
+
+# PROMPT --------------------------------
+project_name:
+  type: str
+  validator: >-
+        {% if not (project_name | regex_search('^[a-z][a-z0-9\-]+$')) %}
+        project_name must start with a letter, followed one or more letters, digits or dashes all lowercase.
+        {% endif %}
+  help: Your project name
+
+add_cli:
+  type: bool
+  default: false
+  help: Add a CLI to your project
