@@ -1,5 +1,5 @@
 # CONFIGURATION -------------------------
-_subdirectory: project
+_subdirectory: template
 _templates_suffix: .jinja
 _jinja_extensions:
     - copier_templates_extensions.TemplateExtensionLoader
